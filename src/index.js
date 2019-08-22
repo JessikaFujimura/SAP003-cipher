@@ -1,8 +1,9 @@
 import { Cipher } from "crypto";
 
-Function Cifrar(msg){
+function Cifrar() {
     let msg = document.getElementById("msg").Value;
-    let cifra = document.getElementById("cifra").Value;
-    let letras = 
+    let fator = parseInt(document.getElementById("cifra").Value);
+    console.log(msg,fator);
     Cipher.Encode();
+    return document.getElementById("msgcifrada").innerHTML = msgcifrada;
 }
