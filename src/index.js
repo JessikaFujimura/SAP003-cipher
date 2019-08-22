@@ -1,9 +1,11 @@
-import { Cipher } from "crypto";
+document.getElementById("Codificar").addEventListener("click", Cifrar);
+    let msg = document.getElementById("msg");
+    let fator = parseInt(document.getElementById("fator"));
+    let result;
+    function Cifrar() {
+        event.preventDefault();
+        window.cipher.Encode(msg.value, fator.value);
+        return document.getElementById("msgcifrada").innerHTML = "result";
+    }
 
-function Cifrar() {
-    let msg = document.getElementById("msg").Value;
-    let fator = parseInt(document.getElementById("cifra").Value);
-    console.log(msg,fator);
-    Cipher.Encode();
-    return document.getElementById("msgcifrada").innerHTML = msgcifrada;
-}
+document.getElementById("formulario").addEventListener("submit", function(event) {event.preventDefault()});  
