@@ -1,35 +1,40 @@
 window.cipher = {
-  Encode:Encode,
+  Encode: Encode,
   Decode: Decode
 };
-function Encode(msg, fator, result) {
+function Encode(Msg, fator) {
   let ConjASCII = [];
-  let codASCII;
-    for (let i=0; i < msg.length; i++){
-      codASCII = msg.charCodeAt(i);
-      ConjASCII.push (codASCII);
+  for (let i=0; i < Msg.length; i++){
+    ConjASCII.push (Msg.charCodeAt(i));
     }
-  let conjASCIIFator = [];
-  let codASCIICifra;
+  let ConjASCIIFator = [];
   function SomaFator (item){
-    if(item <= 90 & item >= 65){
-      codASCIICifra = ((item - 65 + fator) % 26 + 65);
-      conjASCIIFator.push(codASCIICifra)};
+    if(item <= 90 && item >= 65){
+      ConjASCIIFator.push(((item - 65 + fator) % 26 + 65))};
     }
   ConjASCII.forEach(SomaFator);
-  let conjcodASCIIF = [];
+  let ConjcodASCIIF = [];
   function ConvASCII (item){
-    codstr = item.toString();
-    codCifra = String.fromCharCode(codstr);
-    conjcodASCIIF.push(codCifra);
+    ConjcodASCIIF.push(String.fromCharCode(item.toString()));
   }
-    conjASCIIFator.forEach(ConvASCII);
-    result = conjcodASCIIF.join('')
-  //return result;
+  ConjASCIIFator.forEach(ConvASCII);
+  return ConjcodASCIIF.join('');
+}
+function Decode(Codigo, Refator){
+  let ConjCodigo = [];
+  for (let i=0; i < Codigo.length; i++){
+    ConjCodigo.push (Codigo.charCodeAt(i));
+    }
+  let ConjASCIIRFator = [];
+  function SubtFator (item){
+    if (item <= 90 && item >= 65){
+      ConjASCIIRFator.push(((item - 90 - Refator) % 26 + 90))};
+    }
+  ConjCodigo.forEach(SubtFator);
+  let Conj = [];
+  function ConvL (item){
+    Conj.push(String.fromCharCode(item.toString()));
   }
-
-  function Decode(){
-      
-    return
+  ConjASCIIRFator.forEach(ConvL);
+  return Conj.join('');
   }
-

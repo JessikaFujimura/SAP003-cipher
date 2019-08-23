@@ -15,21 +15,22 @@
     </header>
   <article><hr>
     <form id="formulario">
-      <div>Digite a mensagem a ser cifrada: <input id="msg" placeholder="Digite seu texto aqui"/></div><br>
-      <div>Digite o fator de conversão (cifra): <input id="fator" placeholder="Digite o fator de conversão"/></div><br>
+      <p>Digite a mensagem a ser cifrada: <input id="msg" placeholder="Digite seu texto aqui"/></p><br>
+      <p>Digite o fator de conversão (cifra): <input id="fator" placeholder="Digite o fator de conversão"/></p><br>
       <button type="submit" id="Codificar">Codificar</button>
-      <div id="msgcifrada"></div>
-      <script src="index.js"></script>
-      <script src="cipher.js"></script>
+      <button type="submit" id="Limpar">Limpar</button>
     </form>
+    <p id="msgcifrada"></p>
   </article>
   <article><hr>
     <form>
-      <div>Digite a mensagem a ser decifrada: <input id="codigo" placeholder="Digite seu texto aqui"/></div><br>
-      <div>Digite o fator de conversão (cifra): <input id="refator" placeholder="Digite o fator de conversão"/></div><br>
-      <button type="submit" id="Decodificar">Decodificar</button>
+      <p>Digite a mensagem a ser decifrada: <input id="codigo" placeholder="Digite seu texto aqui"/></p><br>
+      <p>Digite o fator de conversão (cifra): <input id="refator" placeholder="Digite o fator de conversão"/></p><br>
+      <button type="submit" onclick="Decifrar()" id="Decodificar">Decodificar</button>
     </form>
-    <div id="msgdescifrada"></div>
+    <p id="msgdecifrada"></p>
+    <script src="index.js"></script>
+    <script src="cipher.js"></script>
   </article>
     </main>
   </body>
