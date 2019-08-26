@@ -4,29 +4,29 @@
     <meta charset="utf-8">
     <title>Mensagem secreta!</title>
     <link rel="stylesheet" href="style.css" />
+  <main>
   </head>
   <body>
     <header>
       <h1>Mensagem secreta!</h1></div>
     </header>
-    <main>
       <p>Crie ou decifre uma mensagem secreta</p>
       <p>Escolha uma opção abaixo:</p>
     </header>
-  <article><hr>
+  <article>
     <form id="formulario">
-      <p>Digite a mensagem a ser cifrada: <input id="msg" placeholder="Digite seu texto aqui"/></p><br>
-      <p>Digite o fator de conversão (cifra): <input id="fator" placeholder="Digite o fator de conversão"/></p><br>
+      <p>Digite a mensagem a ser cifrada: <input type = "text" id="msg" placeholder="Digite seu texto aqui"/></p><br>
+      <p>Digite o fator de conversão (cifra): <input type = "number" id="fator" placeholder="Digite o fator de conversão"/></p><br>
       <button type="submit" id="Codificar">Codificar</button>
       <button type="submit" id="Limpar">Limpar</button>
     </form>
     <p id="msgcifrada"></p>
   </article>
-  <article><hr>
+  <article>
     <form>
-      <p>Digite a mensagem a ser decifrada: <input id="codigo" placeholder="Digite seu texto aqui"/></p><br>
-      <p>Digite o fator de conversão (cifra): <input id="refator" placeholder="Digite o fator de conversão"/></p><br>
-      <button type="submit" onclick="Decifrar()" id="Decodificar">Decodificar</button>
+      <p>Digite a mensagem a ser decifrada: <input type="text" id="codigo" placeholder="Digite seu texto aqui"/></p><br>
+      <p>Digite o fator de conversão (cifra): <input type="number" id="refator" placeholder="Digite o fator de conversão"/></p><br>
+      <button type="submit" id="Decodificar">Decodificar</button>
     </form>
     <p id="msgdecifrada"></p>
     <script src="index.js"></script>
