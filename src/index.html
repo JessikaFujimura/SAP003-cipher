@@ -11,27 +11,18 @@
       <h1>Mensagem secreta!</h1></div>
     </header>
       <p>Crie ou decifre uma mensagem secreta</p>
-      <p>Escolha uma opção abaixo:</p>
-    </header>
-  <article>
-    <form id="formulario">
-      <p>Digite a mensagem a ser cifrada: <input type = "text" id="msg" placeholder="Digite seu texto aqui"/></p><br>
-      <p>Digite o fator de conversão (cifra): <input type = "number" id="fator" placeholder="Digite o fator de conversão"/></p><br>
-      <button type="submit" id="Codificar">Codificar</button>
-      <button type="submit" id="Limpar">Limpar</button>
-    </form>
-    <p id="msgcifrada"></p>
-  </article>
-  <article>
-    <form>
-      <p>Digite a mensagem a ser decifrada: <input type="text" id="codigo" placeholder="Digite seu texto aqui"/></p><br>
-      <p>Digite o fator de conversão (cifra): <input type="number" id="refator" placeholder="Digite o fator de conversão"/></p><br>
-      <button type="submit" id="Decodificar">Decodificar</button>
-    </form>
-    <p id="msgdecifrada"></p>
+      <p>Para criar ou decifrar uma mensagem secreta insira um texto e um fator depois clique no botão codificar ou decodificar:</p>
+    <div class="box">
+      <form id="forms">
+        <p>Digite sua mensagem:<input type = "text" id="msg" placeholder="Digite seu texto aqui"/></p><br>
+        <p>Digite o fator de conversão (cifra): <input type = "number" id="offset" placeholder="Digite o fator de conversão"/></p><br>
+        <button type="button" id="codificar">Codificar</button>
+        <button type="submit" id="decodificar">Decodificar</button>
+        <button type="submit" id="limpar">Limpar</button>
+      </form>
+      <p id="result"></p>
     <script src="index.js"></script>
     <script src="cipher.js"></script>
-  </article>
     </main>
   </body>
 </html>

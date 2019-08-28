@@ -2,38 +2,35 @@ window.cipher = {
   encode: encode,
   decode: decode
 };
-function encode (Msg, Fator) {
-  let ConjASCII = [];
-  for ( let i=0; i < Msg.length; i++) {
-    ConjASCII.push(Msg.charCodeAt(i)+ Number(Fator));
+function encode (offset, msg) {
+  let Arraymsg = [];
+  let msgitem;
+  for ( let i=0; i < msg.length; i++) {
+    Arraymsg[i] = msg.charCodeAt(i);
+    if (Arraymsg[i]>=65 && Arraymsg[i]<=90) {
+      msgitem = ((Arraymsg[i] - 65 + offset) % 26 + 65);
+    } else if (Arraymsg[i]>=97 && Arraymsg[i]<=122) {
+      msgitem = ((Arraymsg[i] - 97 + offset) % 26 + 97);
+    } else {
+      msgitem = msg.charCodeAt(i);
+    }
+    Arraymsg[i] = String.fromCharCode(msgitem);
   }
-  let ConjASCIIFator = [];
-  function SomaFator (item) {
-    ConjASCIIFator.push((item - 65 ) % 26 + 65);
-    
-  }
-  ConjASCII.forEach(SomaFator);
-  let ConjcodASCIIF = [];
-  function ConvASCII ( item) {
-    ConjcodASCIIF.push (String.fromCharCode(item.toString()));
-  }
-  ConjASCIIFator.forEach (ConvASCII);
-  return ConjcodASCIIF.join ("");
+  return Arraymsg.join ("");
 }
-function decode (Codigo, Refator) {
-  let ConjCodigo = [];
-  for ( let i=0; i < Codigo.length; i++) {
-    ConjCodigo.push (Codigo.charCodeAt(i)- Number(Refator));
+function decode (offset, msg) {
+  let Arraymsg = [];
+  let msgitem;
+  for ( let j=0; j < msg.length; j++) {
+    Arraymsg[j] = msg.charCodeAt(j);
+    if (Arraymsg[j]>=65 && Arraymsg[j]<=90) {
+      msgitem = ((Arraymsg[j]- 90 - offset) % 26 + 90);
+    } else if (Arraymsg[j]>=97 && Arraymsg[j]<=122) {
+      msgitem = ((Arraymsg[j]- 122 - offset) % 26 + 122);
+    } else {
+      msgitem = msg.charCodeAt(j);
+    }
+    Arraymsg[j] = String.fromCharCode(msgitem);
   }
-  let ConjASCIIRFator = [ ];
-  function SubtFator (item) {
-    ConjASCIIRFator.push (((item - 90) % 26 + 90));
-  }
-  ConjCodigo.forEach(SubtFator);
-  let Conj = [];
-  function ConvL ( item) {
-    Conj.push ( String.fromCharCode(item.toString()));
-  }
-  ConjASCIIRFator.forEach(ConvL);
-  return Conj.join ("");
-}
+  return Arraymsg.join("");
+}    
