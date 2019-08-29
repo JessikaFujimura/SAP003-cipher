@@ -27,7 +27,6 @@ h1 {
     position: absolute;
     left: 20%;
     top: 30%;
-    ;
 }
 button:hover {
     background-color: chartreuse;
@@ -36,11 +35,27 @@ input#msg {
     width: 90%;
     height: 60px;
 }
-p {
+span {
     background-color: black;
     border: 3px dotted rgb(94, 255, 0);
     display: inline-block;
-    margin: auto;
+    margin: 10px;
     padding: 10px;
     font-size: 20px;
+}
+p {
+    margin: 5px;
+    padding: 5px;
+}
+#result {
+    width: 800px;
+    height: 50px;
+    padding: 5px;
+    border: 3px dotted rgb(94, 255, 0);
+    background-color: black;
+    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 1px;
+    top: 270px;
 }

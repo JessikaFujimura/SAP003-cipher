@@ -5,18 +5,34 @@ window.cipher = {
 function encode (offset, msg) {
   let Arraymsg = [];
   let msgitem;
-  for ( let i=0; i < msg.length; i++) {
-    Arraymsg[i] = msg.charCodeAt(i);
-    if (Arraymsg[i]>=65 && Arraymsg[i]<=90) {
-      msgitem = ((Arraymsg[i] - 65 + offset) % 26 + 65);
-    } else if (Arraymsg[i]>=97 && Arraymsg[i]<=122) {
-      msgitem = ((Arraymsg[i] - 97 + offset) % 26 + 97);
-    } else {
-      msgitem = msg.charCodeAt(i);
+  if (offset > 0) {
+    for ( let i=0; i < msg.length; i++) {
+      Arraymsg[i] = msg.charCodeAt(i);
+      if (Arraymsg[i]>=65 && Arraymsg[i]<=90) {
+        msgitem = ((Arraymsg[i] - 65 + offset) % 26 + 65);
+      } else if (Arraymsg[i]>=97 && Arraymsg[i]<=122) {
+        msgitem = ((Arraymsg[i] - 97 + offset) % 26 + 97);
+      } else {
+        msgitem = msg.charCodeAt(i);
+      }
+      Arraymsg[i] = String.fromCharCode(msgitem);
     }
-    Arraymsg[i] = String.fromCharCode(msgitem);
+    return Arraymsg.join ("");
   }
-  return Arraymsg.join ("");
+  if (offset < 0) {
+    for ( let i=0; i < msg.length; i++) {
+      Arraymsg[i] = msg.charCodeAt(i);
+      if (Arraymsg[i]>=65 && Arraymsg[i]<=90) {
+        msgitem = ((Arraymsg[i] - 90 + offset) % 26 + 90);
+      } else if (Arraymsg[i]>=97 && Arraymsg[i]<=122) {
+        msgitem = ((Arraymsg[i] - 122 + offset) % 26 + 122);
+      } else {
+        msgitem = msg.charCodeAt(i);
+      }
+      Arraymsg[i] = String.fromCharCode(msgitem);
+    }
+    return Arraymsg.join ("");
+  }
 }
 function decode (offset, msg) {
   let Arraymsg = [];

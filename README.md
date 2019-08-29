@@ -1,7 +1,7 @@
 #  Mensagem secreta com cifra de César
 Esta página transforma uma mensagem digitada em uma mensagem cifrada. O método de cifrar empregado foi Cifra de César. 
 
-Esta aplicação é destinada para comunicação secreta entre usuários de redes sociais.
+Esta aplicação é destinada para comunicação secreta entre usuários de qualquer natureza.
 
 ## 1. O que é Cifra de César?
 A cifra de César é método simples de criptografia e é considerar um dos primeiros
