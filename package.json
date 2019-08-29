@@ -18,5 +18,19 @@
     "nyc": "^14.1.1",
     "opener": "^1.4.3",
     "serve": "^11.0.0"
-  }
+  },
+  "description": "## Índice",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessikaFujimura/SAP003-cipher.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/JessikaFujimura/SAP003-cipher/issues"
+  },
+  "homepage": "https://github.com/JessikaFujimura/SAP003-cipher#readme"
 }
