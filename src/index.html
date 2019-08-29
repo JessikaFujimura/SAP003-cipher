@@ -4,25 +4,24 @@
     <meta charset="utf-8">
     <title>Mensagem secreta!</title>
     <link rel="stylesheet" href="style.css" />
-  <main>
   </head>
   <body>
     <header>
       <h1>Mensagem secreta!</h1></div>
     </header>
+    <main>
       <p>Crie ou decifre uma mensagem secreta</p>
       <p>Para criar ou decifrar uma mensagem secreta insira um texto e um fator depois clique no botão codificar ou decodificar:</p>
-    <div class="box">
       <form id="forms">
-        <p>Digite sua mensagem:<input type = "text" id="msg" placeholder="Digite seu texto aqui"/></p><br>
-        <p>Digite o fator de conversão (cifra): <input type = "number" id="offset" placeholder="Digite o fator de conversão"/></p><br>
-        <button type="button" id="codificar">Codificar</button>
-        <button type="submit" id="decodificar">Decodificar</button>
-        <button type="submit" id="limpar">Limpar</button>
+          Mensagem<input type = "text" id="msg" placeholder="Digite seu texto aqui"/><br>
+          Chave de codificação: <input type = "number" id="offset"/><br>
+          <button type="button" id="codificar">Codificar</button>
+          <button type="submit" id="decodificar">Decodificar</button>
+          <button type="submit" id="limpar">Limpar</button>
+          <div id="result"></div>
       </form>
-      <p id="result"></p>
+    </main>
     <script src="index.js"></script>
     <script src="cipher.js"></script>
-    </main>
   </body>
 </html>
