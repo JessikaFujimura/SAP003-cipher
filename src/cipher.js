@@ -2,51 +2,51 @@ window.cipher = {
   encode: encode,
   decode: decode
 };
+let arrayMsg = [];
+let msgItem;
+
 function encode (offset, msg) {
-  let Arraymsg = [];
-  let msgitem;
   if (offset > 0) {
-    for ( let i=0; i < msg.length; i++) {
-      Arraymsg[i] = msg.charCodeAt(i);
-      if (Arraymsg[i]>=65 && Arraymsg[i]<=90) {
-        msgitem = ((Arraymsg[i] - 65 + offset) % 26 + 65);
-      } else if (Arraymsg[i]>=97 && Arraymsg[i]<=122) {
-        msgitem = ((Arraymsg[i] - 97 + offset) % 26 + 97);
+    for (let i=0; i < msg.length; i++) {
+      arrayMsg[i] = msg.charCodeAt(i);
+      if (arrayMsg[i]>=65 && arrayMsg[i]<=90) {
+        msgItem = ((arrayMsg[i] - 65 + offset) % 26 + 65);
+      } else if (arrayMsg[i]>=97 && arrayMsg[i]<=122) {
+        msgItem = ((arrayMsg[i] - 97 + offset) % 26 + 97);
       } else {
-        msgitem = msg.charCodeAt(i);
+        msgItem = msg.charCodeAt(i);
       }
-      Arraymsg[i] = String.fromCharCode(msgitem);
+      arrayMsg[i] = String.fromCharCode(msgItem);
     }
-    return Arraymsg.join ("");
+    return arrayMsg.join ("");
   }
   if (offset < 0) {
-    for ( let i=0; i < msg.length; i++) {
-      Arraymsg[i] = msg.charCodeAt(i);
-      if (Arraymsg[i]>=65 && Arraymsg[i]<=90) {
-        msgitem = ((Arraymsg[i] - 90 + offset) % 26 + 90);
-      } else if (Arraymsg[i]>=97 && Arraymsg[i]<=122) {
-        msgitem = ((Arraymsg[i] - 122 + offset) % 26 + 122);
+    for (let i=0; i < msg.length; i++) {
+      arrayMsg[i] = msg.charCodeAt(i);
+      if (arrayMsg[i]>=65 && arrayMsg[i]<=90) {
+        msgItem = ((arrayMsg[i] - 90 + offset) % 26 + 90);
+      } else if (arrayMsg[i]>=97 && arrayMsg[i]<=122) {
+        msgItem = ((arrayMsg[i] - 122 + offset) % 26 + 122);
       } else {
-        msgitem = msg.charCodeAt(i);
+        msgItem = msg.charCodeAt(i);
       }
-      Arraymsg[i] = String.fromCharCode(msgitem);
+      arrayMsg[i] = String.fromCharCode(msgItem);
     }
-    return Arraymsg.join ("");
+    return arrayMsg.join ("");
   }
 }
+
 function decode (offset, msg) {
-  let Arraymsg = [];
-  let msgitem;
   for ( let j=0; j < msg.length; j++) {
-    Arraymsg[j] = msg.charCodeAt(j);
-    if (Arraymsg[j]>=65 && Arraymsg[j]<=90) {
-      msgitem = ((Arraymsg[j]- 90 - offset) % 26 + 90);
-    } else if (Arraymsg[j]>=97 && Arraymsg[j]<=122) {
-      msgitem = ((Arraymsg[j]- 122 - offset) % 26 + 122);
+    arrayMsg[j] = msg.charCodeAt(j);
+    if (arrayMsg[j]>=65 && arrayMsg[j]<=90) {
+      msgItem = ((arrayMsg[j]- 90 - offset) % 26 + 90);
+    } else if (arrayMsg[j]>=97 && arrayMsg[j]<=122) {
+      msgItem = ((arrayMsg[j]- 122 - offset) % 26 + 122);
     } else {
-      msgitem = msg.charCodeAt(j);
+      msgItem = msg.charCodeAt(j);
     }
-    Arraymsg[j] = String.fromCharCode(msgitem);
+    arrayMsg[j] = String.fromCharCode(msgItem);
   }
-  return Arraymsg.join("");
+  return arrayMsg.join("");
 }    

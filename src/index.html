@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mensagem secreta!</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Mensagem secreta!</h1></div>
-    </header>
-    <main>
-      <span>Crie ou decifre uma mensagem secreta</span>
-      <span>Para criar ou decifrar uma mensagem secreta insira um texto e uma chave de codificação depois clique no botão codificar ou decodificar:</span>
-      <form id="forms">
-          <p>Mensagem<input type = "text" id="msg" placeholder="Digite seu texto aqui"/></p><br>
-          <p>Chave de codificação: <input type = "number" id="offset"/></p><br>
-          <button type="button" id="codificar">Codificar</button>
-          <button type="submit" id="decodificar">Decodificar</button>
-          <button type="submit" id="limpar">Limpar</button>
-          <div id="result"></div>
-      </form>
-    </main>
-    <script src="index.js"></script>
-    <script src="cipher.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Mensagem secreta!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body">
+  <header class="title">
+    <h1>Mensagem secreta!</h1>
+    </div>
+  </header>
+  <main class="main">
+    <span class="text">Crie ou decifre uma mensagem secreta</span>
+    <span class="text">Para criar ou decifrar uma mensagem secreta insira um texto e uma chave de codificação depois clique no botão
+      codificar ou decodificar:</span>
+    <form class="form">
+      <label for="msg">Mensagem</label>
+        <textarea id="msg" class="textarea" placeholder="Digite seu texto aqui"></textarea>
+      <label for="offset">Chave de codificação:
+        <input class="input" type="number" id="offset" />
+      </label>
+      <section>
+        <button class="button" type="button" id="encode">Codificar</button>
+        <button class="button" type="button" id="decode">Decodificar</button>
+        <button class="button" type="button" id="clean">Limpar</button>
+      </section>
+      <section id="result"></section>
+    </form>
+  </main>
+  <script src="index.js"></script>
+  <script src="cipher.js"></script>
+</body>
+
 </html>

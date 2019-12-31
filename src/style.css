@@ -2,60 +2,80 @@
     margin: 0;
     padding: 0;
 }
-body {
+.body {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Cambria, Cochin, Georgia, Times, Times New Roman', serif;
     background-image: url(./img/Fundo.jpg);
     background-size: cover;
     color: rgb(0, 255, 0);
     text-align: center;
 }
-h1 {
-    color:rgb(153, 245, 4);
-    font-size: 35px;
+.title {
+    text-shadow: 2px 3px 5px rgb(153, 245, 4);
+    font-size: 150%;
+    padding: 2%;
 }
-#forms{
-    width: 60%;
-    height: 30%;
-    padding: 5px;
-    margin: 5px;
+.form {
+    width: 70vw;
+    height: auto;
+    padding: 1%;
     border: 3px dotted rgb(94, 255, 0);
     background-color: black;
     font-size: 20px;
-    display: inline-block;
-    position: absolute;
-    left: 20%;
-    top: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    margin: 1%;
 }
-button:hover {
+.button {
+    width: auto;
+    height: auto;
+    padding: 0.5%;
+    margin: 2%;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: 100%;
+}
+.button:hover {
     background-color: chartreuse;
 }
-input#msg {
-    width: 90%;
-    height: 60px;
+.textarea {
+    width: 80%;
+    height: 3rem;
+    border-radius: 10px;
+    padding: 10px;
+    align-self: center;
+    margin-bottom: 2%;
 }
-span {
+.input {
+    height: 10px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.text {
     background-color: black;
     border: 3px dotted rgb(94, 255, 0);
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 0.5%;
+    padding: 1%;
     font-size: 20px;
-}
-p {
-    margin: 5px;
-    padding: 5px;
 }
 #result {
-    width: 800px;
-    height: 50px;
+    width: auto;
+    height: auto;
     padding: 5px;
     border: 3px dotted rgb(94, 255, 0);
     background-color: black;
     font-size: 20px;
-    display: inline-block;
-    position: absolute;
-    left: 1px;
-    top: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
