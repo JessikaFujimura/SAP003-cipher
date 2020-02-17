@@ -29,6 +29,8 @@ Para decifrar uma mensagem secreta, o usuário deve inserir o texto codificado n
 
 A mensagem codificada ou decodificada aparecerá no campo abaixo.
 
+![](./src/img/video.gif)
+
 ## 3. Como funciona esta aplicação?
 
 Esta aplicação é composta pelos seguintes arquivos:
